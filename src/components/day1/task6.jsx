@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../jsons/task6.json";
+import styles from "./jsons/task6.json";
 
 export default function task4() {
   return (
