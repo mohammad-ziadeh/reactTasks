@@ -1,0 +1,13 @@
+{
+  "orange": {
+    "color": "green"
+  },
+  "coding": {
+    "color": "orange",
+    "font-weight": "bold"
+  },
+  "academy": {
+    "color": "red",
+    "text-decoration": "italic"
+  }
+}
