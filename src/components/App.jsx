@@ -1,33 +1,26 @@
 import React from "react";
-
+import Home from "./day3/pages/home.jsx";
+import Contact from "./day3/pages/contact.jsx";
+import About from "./day3/pages/about.jsx";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<About />} />
+    </>
+  )
+);
 export default function App() {
-  const logged = false;
-  const students = [
-    {
-      name: "abd",
-      age: "27",
-    },
-    {
-      name: "mohammad",
-      age: "18",
-    },
-    {
-      name: "ahmed",
-      age: "22",
-    },
-  ];
-
   return (
     <div>
-      {/* <ul>
-        {students.map((names, index) => (
-          <li key={index}>
-            the name is: {names.name} <br />
-            the age is: {names.age}
-          </li>
-        ))}
-      </ul>
-      {logged ? <h1>hello</h1> : <h1>not hello</h1>} */}
+      <RouterProvider router={router} />
     </div>
   );
 }
